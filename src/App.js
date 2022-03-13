@@ -1,22 +1,28 @@
-import './App.css';
-import React from 'react';
+import "./App.css";
+import React from "react";
+
+export const convertText = (text, option) => {
+  return option;
+};
 
 function App() {
-  const [textInput, setTextInput] = React.useState('Here is some example text.');
-  const [conversionMode, setConversionMode] = React.useState('lowercase');
-  const [textOutput, setTextOutput] = React.useState('');
+  const [textInput, setTextInput] = React.useState(
+    "Here is some example text."
+  );
+  const [conversionMode, setConversionMode] = React.useState("lowercase");
+  const [textOutput, setTextOutput] = React.useState("");
 
-  const handleRadioChange = event => {
+  const handleRadioChange = (event) => {
     setConversionMode(event.target.value);
-  }
+  };
 
-  const handleTextareaChange = event => {
+  const handleTextareaChange = (event) => {
     setTextInput(event.target.value);
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    setTextOutput('Your formatted text will go here!')
+    setTextOutput("Your formatted text will go here!");
   };
 
   return (
@@ -58,7 +64,9 @@ function App() {
         <button type="button">Submit</button>
         <div className="form-control form-control__text u-mt-3">
           <label htmlFor="result">Converted text:</label>
-          <output id="result" class="result">{textOutput}</output>
+          <output id="result" className="result">
+            {textOutput}
+          </output>
         </div>
       </form>
     </div>
