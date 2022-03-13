@@ -2,11 +2,8 @@ import "./App.css";
 import React from "react";
 
 export const convertText = (text, option) => {
-  if (option === "lowercase") {
-    return text.toLowerCase();
-  } else {
-    return text.toUpperCase();
-  }
+  if (option === "lowercase") return text.toLowerCase();
+  if (option === "uppercase") return text.toUpperCase();
 };
 
 function App() {
